@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<!--
+EasyNotes - based on Note Sidebar, Copyright (C) 2026 Stefan vd (www.stefanvd.net)
+Modifications Copyright (C) 2026 EasyNotes contributors
+Licensed under the GNU General Public License v2 or later. See LICENSE.
+-->
+<title>EasyNotes Settings</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="color-scheme" content="light dark">
+<link rel="icon" href="images/icon32.png">
+<link rel="stylesheet" href="styles/fonts.css">
+<link rel="stylesheet" href="styles/options.css">
+<script src="scripts/store.js"></script>
+<script src="scripts/options.js" defer></script>
+</head>
+<body>
+<div class="window">
+	<aside class="sidebar">
+		<div class="brand">
+			<img src="images/icon96.png" alt="" width="36" height="36">
+			<div>
+				<div class="brand-name">EasyNotes</div>
+				<div class="brand-sub" data-i18n="settings">Settings</div>
+			</div>
+		</div>
+		<nav>
+			<a href="#general" class="nav-item active"><span class="nav-dot" style="--c:#8e8e93"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="3"/><circle cx="12" cy="12" r="6.5"/><path d="M12 2.8v2.7M12 18.5v2.7M2.8 12h2.7M18.5 12h2.7M5.5 5.5l1.9 1.9M16.6 16.6l1.9 1.9M5.5 18.5l1.9-1.9M16.6 7.4l1.9-1.9"/></svg></span><span data-i18n="secGeneral">General</span></a>
+			<a href="#appearance" class="nav-item"><span class="nav-dot" style="--c:#0a84ff"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="8"/><path d="M12 4a8 8 0 0 1 0 16z" fill="currentColor"/></svg></span><span data-i18n="secAppearance">Appearance</span></a>
+			<a href="#editor" class="nav-item"><span class="nav-dot" style="--c:#ff9f0a"><svg viewBox="0 0 24 24"><path d="M15.5 4.5l4 4L9 19H5v-4z"/><path d="M13 7l4 4"/></svg></span><span data-i18n="secEditor">Editor</span></a>
+			<a href="#clipper" class="nav-item"><span class="nav-dot" style="--c:#30d158"><svg viewBox="0 0 24 24"><circle cx="6.5" cy="7" r="2.5"/><circle cx="6.5" cy="17" r="2.5"/><path d="M8.7 8.3L19.5 17.5M8.7 15.7L19.5 6.5"/></svg></span><span data-i18n="secClipper">Web Clipper</span></a>
+			<a href="#privacy" class="nav-item"><span class="nav-dot" style="--c:#ff453a"><svg viewBox="0 0 24 24"><rect x="5.5" y="10.5" width="13" height="10" rx="2"/><path d="M8.5 10.5V8a3.5 3.5 0 0 1 7 0v2.5"/></svg></span><span data-i18n="secPrivacy">Privacy &amp; Lock</span></a>
+			<a href="#data" class="nav-item"><span class="nav-dot" style="--c:#bf5af2"><svg viewBox="0 0 24 24"><rect x="3.5" y="4.5" width="17" height="4.5" rx="1.2"/><path d="M5 9v9.5A1.5 1.5 0 0 0 6.5 20h11a1.5 1.5 0 0 0 1.5-1.5V9M10 13h4"/></svg></span><span data-i18n="secData">Storage &amp; Backup</span></a>
+			<a href="#about" class="nav-item"><span class="nav-dot" style="--c:#64d2ff"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="8.5"/><path d="M12 11v5.5"/><circle cx="12" cy="7.8" r="1.1" fill="currentColor" stroke="none"/></svg></span><span data-i18n="secAbout">About</span></a>
+		</nav>
+	</aside>
+
+	<main class="content">
+		<section id="general">
+			<h2 data-i18n="secGeneral">General</h2>
+			<div class="card">
+				<div class="row">
+					<div class="label"><span data-i18n="optSortBy">Sort notes by</span></div>
+					<select id="sortBy">
+						<option value="modified" data-i18n="sortModified">Date Edited</option>
+						<option value="created" data-i18n="sortCreated">Date Created</option>
+						<option value="title" data-i18n="sortTitle">Title</option>
+					</select>
+				</div>
+				<div class="row">
+					<div class="label"><span data-i18n="groupByDate">Group by Date</span><small data-i18n="optGroupHint">Today, Yesterday, Previous 7 Days…</small></div>
+					<label class="switch"><input type="checkbox" id="groupByDate"><span></span></label>
+				</div>
+				<div class="row">
+					<div class="label"><span data-i18n="optShortcuts">Keyboard shortcuts</span><small data-i18n="optShortcutsHint">Open EasyNotes: Alt+Shift+N · Add selected text: Alt+Shift+A</small></div>
+					<button id="open-shortcuts" class="btn" data-i18n="change">Change…</button>
+				</div>
+			</div>
+		</section>
+
+		<section id="appearance">
+			<h2 data-i18n="secAppearance">Appearance</h2>
+			<div class="card">
+				<div class="row stack">
+					<div class="label"><span data-i18n="optTheme">Theme</span></div>
+					<div class="theme-picker" role="radiogroup">
+						<label class="theme"><input type="radio" name="theme" value="auto"><span class="swatch auto"></span><span data-i18n="themeAuto">Auto</span></label>
+						<label class="theme"><input type="radio" name="theme" value="light"><span class="swatch light"></span><span data-i18n="themeLight">Light</span></label>
+						<label class="theme"><input type="radio" name="theme" value="dark"><span class="swatch dark"></span><span data-i18n="themeDark">Dark</span></label>
+					</div>
+				</div>
+				<div class="row">
+					<div class="label"><span data-i18n="optPaper">Paper style</span></div>
+					<div class="segmented" id="paper">
+						<button data-value="none" data-i18n="paperNone">Plain</button>
+						<button data-value="lines" data-i18n="paperLines">Lines</button>
+						<button data-value="grid" data-i18n="paperGrid">Grid</button>
+					</div>
+				</div>
+			</div>
+		</section>
+
+		<section id="editor">
+			<h2 data-i18n="secEditor">Editor</h2>
+			<div class="card">
+				<div class="row">
+					<div class="label"><span data-i18n="optFont">Font</span></div>
+					<select id="fontFamily">
+						<optgroup label="EasyNotes">
+							<option value="system" data-i18n="fontSystem">SF Pro (default)</option>
+							<option value="serif" data-i18n="fontSerif">Serif</option>
+							<option value="rounded" data-i18n="fontRounded">Rounded</option>
+							<option value="mono" data-i18n="fontMono">Monospaced</option>
+						</optgroup>
+						<optgroup label="Classic">
+							<option value="Arial">Arial</option>
+							<option value="Brush Script MT">Brush Script MT</option>
+							<option value="Calibri">Calibri</option>
+							<option value="Courier New">Courier New</option>
+							<option value="cursive">Cursive</option>
+							<option value="Garamond">Garamond</option>
+							<option value="Georgia">Georgia</option>
+							<option value="Helvetica">Helvetica</option>
+							<option value="Roboto">Roboto</option>
+							<option value="sans-serif">Sans-serif</option>
+							<option value="Tahoma">Tahoma</option>
+							<option value="Times New Roman">Times New Roman</option>
+							<option value="Verdana">Verdana</option>
+						</optgroup>
+					</select>
+				</div>
+				<div class="row">
+					<div class="label"><span data-i18n="optFontSize">Text size</span></div>
+					<div class="slider"><span class="a-small">A</span><input type="range" id="fontSize" min="12" max="26" step="1"><span class="a-big">A</span><output id="fontSizeOut"></output></div>
+				</div>
+				<div class="preview" id="preview">
+					<div class="preview-title" data-i18n="previewTitle">Grocery list</div>
+					<div data-i18n="previewText">The quick brown fox jumps over the lazy dog.</div>
+				</div>
+				<div class="row">
+					<div class="label"><span data-i18n="optWordCount">Show word count</span></div>
+					<label class="switch"><input type="checkbox" id="showWordCount"><span></span></label>
+				</div>
+				<div class="row">
+					<div class="label"><span data-i18n="optSpellcheck">Check spelling while typing</span></div>
+					<label class="switch"><input type="checkbox" id="spellcheck"><span></span></label>
+				</div>
+				<div class="row">
+					<div class="label"><span data-i18n="optVoice">Read Aloud voice</span></div>
+					<select id="speechVoice"><option value="" data-i18n="voiceDefault">System default</option></select>
+				</div>
+				<div class="row">
+					<div class="label"><span data-i18n="optRate">Reading speed</span></div>
+					<div class="slider"><input type="range" id="speechRate" min="0.5" max="2" step="0.1"><output id="speechRateOut"></output></div>
+				</div>
+			</div>
+		</section>
+
+		<section id="clipper">
+			<h2 data-i18n="secClipper">Web Clipper</h2>
+			<div class="card">
+				<div class="row">
+					<div class="label"><span data-i18n="optContextMenus">Show “Add to EasyNotes” in the right-click menu</span></div>
+					<label class="switch"><input type="checkbox" id="contextMenus"><span></span></label>
+				</div>
+				<div class="row">
+					<div class="label"><span data-i18n="optClipTarget">Add clips to</span></div>
+					<select id="clipTarget">
+						<option value="last" data-i18n="clipLast">Last edited note</option>
+						<option value="new" data-i18n="clipNew">A new note</option>
+					</select>
+				</div>
+				<div class="row">
+					<div class="label"><span data-i18n="optClipSource">Include a link to the source page</span></div>
+					<label class="switch"><input type="checkbox" id="clipSource"><span></span></label>
+				</div>
+			</div>
+		</section>
+
+		<section id="privacy">
+			<h2 data-i18n="secPrivacy">Privacy &amp; Lock</h2>
+			<div class="card">
+				<div class="row">
+					<div class="label"><span data-i18n="optLock">Lock notes with a password</span><small data-i18n="optLockHint">Asks for the password every time the sidebar opens.</small></div>
+					<label class="switch"><input type="checkbox" id="lock"><span></span></label>
+				</div>
+				<div class="row stack" id="password-row">
+					<div class="password-fields">
+						<input type="password" id="pw1" autocomplete="new-password" placeholder="New password" data-i18n-placeholder="newPassword">
+						<input type="password" id="pw2" autocomplete="new-password" placeholder="Repeat password" data-i18n-placeholder="repeatPassword">
+						<button id="save-password" class="btn primary" data-i18n="setPassword">Set Password</button>
+					</div>
+					<small class="note" data-i18n="lockDisclaimer">The lock hides your notes from people using this browser. Notes are not encrypted on disk.</small>
+				</div>
+			</div>
+		</section>
+
+		<section id="data">
+			<h2 data-i18n="secData">Storage &amp; Backup</h2>
+			<div class="card">
+				<div class="row stack">
+					<div class="label"><span data-i18n="optStorage">Where to keep notes</span></div>
+					<label class="radio"><input type="radio" name="storage" value="local"><span><b data-i18n="storageLocal">On this computer</b><small data-i18n="storageLocalHint">No size limit. Images in notes are supported.</small></span></label>
+					<label class="radio"><input type="radio" name="storage" value="sync"><span><b data-i18n="storageSync">Sync with your Chrome account</b><small data-i18n="storageSyncHint">Available on every computer you sign in to. About 8 KB per note, 100 KB in total, no images.</small></span></label>
+				</div>
+				<div class="row">
+					<div class="label"><span data-i18n="optUsage">Space used</span></div>
+					<span id="usage" class="value"></span>
+				</div>
+			</div>
+			<div class="card">
+				<div class="row">
+					<div class="label"><span data-i18n="optExport">Back up all notes</span><small data-i18n="optExportHint">Saves notes and folders to a .json file.</small></div>
+					<button id="export" class="btn" data-i18n="exportBtn">Export…</button>
+				</div>
+				<div class="row">
+					<div class="label"><span data-i18n="optImport">Import notes</span><small data-i18n="optImportHint">From an EasyNotes backup, a Note Sidebar export, or any .txt / .md file.</small></div>
+					<button id="import" class="btn" data-i18n="importBtn">Import…</button>
+					<input type="file" id="import-file" accept=".json,.txt,.md,text/plain,application/json" multiple hidden>
+				</div>
+				<div class="row">
+					<div class="label"><span data-i18n="optReset">Reset settings</span><small data-i18n="optResetHint">Your notes are kept.</small></div>
+					<button id="reset" class="btn danger" data-i18n="resetBtn">Reset…</button>
+				</div>
+			</div>
+		</section>
+
+		<section id="about">
+			<h2 data-i18n="secAbout">About</h2>
+			<div class="card about">
+				<img src="images/icon128.png" alt="" width="72" height="72">
+				<div>
+					<div class="about-name">EasyNotes <span id="version"></span></div>
+					<p data-i18n="aboutText">Simple notes in your browser sidebar: write, make checklists and save bits of the web.</p>
+					<p class="credit">Based on <i>Note Sidebar</i> by Stefan vd, © 2026. Released under the GNU General Public License v2 or later.</p>
+				</div>
+			</div>
+		</section>
+	</main>
+</div>
+<div id="toast" class="toast" role="status" aria-live="polite"></div>
+</body>
+</html>

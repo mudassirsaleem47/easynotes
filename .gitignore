@@ -1,0 +1,16 @@
+# Apple's SF Pro font may not be redistributed. Keep your local copy out of the repository.
+fonts/*.otf
+fonts/*.ttf
+fonts/*.woff
+fonts/*.woff2
+
+# Local tooling
+.claude/
+*.zip
+*.crx
+*.pem
+
+# OS files
+.DS_Store
+Thumbs.db
+desktop.ini

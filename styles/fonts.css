@@ -1,0 +1,22 @@
+/* SF Pro Display, bundled for the EasyNotes interface. */
+@font-face{
+	font-family: "EN SF Pro";
+	src: url("../fonts/SFProDisplay-Regular.otf") format("opentype");
+	font-weight: 100 449;
+	font-style: normal;
+	font-display: swap;
+}
+@font-face{
+	font-family: "EN SF Pro";
+	src: url("../fonts/SFProDisplay-Medium.otf") format("opentype");
+	font-weight: 450 649;
+	font-style: normal;
+	font-display: swap;
+}
+@font-face{
+	font-family: "EN SF Pro";
+	src: url("../fonts/SFProDisplay-Bold.otf") format("opentype");
+	font-weight: 650 900;
+	font-style: normal;
+	font-display: swap;
+}

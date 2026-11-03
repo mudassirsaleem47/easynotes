@@ -1,0 +1,535 @@
+{
+	"name": {
+		"message": "EasyNotes",
+		"description": "Extension name"
+	},
+	"description": {
+		"message": "Notes in your browser sidebar: write, make checklists, organise folders and save text from any web page.",
+		"description": "Extension description"
+	},
+	"cmdClip": {
+		"message": "Add selected text to EasyNotes"
+	},
+	"menuClipSelection": {
+		"message": "Add to EasyNotes"
+	},
+	"menuClipLink": {
+		"message": "Save Link to EasyNotes"
+	},
+	"menuClipPage": {
+		"message": "Save Page Link to EasyNotes"
+	},
+	"allNotes": {
+		"message": "All Notes"
+	},
+	"recentlyDeleted": {
+		"message": "Recently Deleted"
+	},
+	"yesterday": {
+		"message": "Yesterday"
+	},
+	"today": {
+		"message": "Today"
+	},
+	"previous7": {
+		"message": "Previous 7 Days"
+	},
+	"previous30": {
+		"message": "Previous 30 Days"
+	},
+	"noAdditionalText": {
+		"message": "No additional text"
+	},
+	"newNote": {
+		"message": "New Note"
+	},
+	"pinned": {
+		"message": "Pinned"
+	},
+	"topHits": {
+		"message": "Results"
+	},
+	"noResults": {
+		"message": "No Results"
+	},
+	"trashEmpty": {
+		"message": "Notes you delete stay here for $1 days."
+	},
+	"noNotes": {
+		"message": "No Notes"
+	},
+	"oneNote": {
+		"message": "1 Note"
+	},
+	"countNotes": {
+		"message": "$1 Notes"
+	},
+	"deletePermanently": {
+		"message": "Delete Permanently"
+	},
+	"closeTab": {
+		"message": "Delete Note"
+	},
+	"oneWord": {
+		"message": "1 word"
+	},
+	"countWords": {
+		"message": "$1 words"
+	},
+	"countChars": {
+		"message": "$1 characters"
+	},
+	"notSaved": {
+		"message": "Could not save the note"
+	},
+	"quotaWarning": {
+		"message": "This note is too large to sync (limit 8 KB). Switch to Local storage in Settings to keep it safe."
+	},
+	"imagesNeedLocal": {
+		"message": "Images can only be saved with Local storage (see Settings)."
+	},
+	"findCount": {
+		"message": "$1 of $2"
+	},
+	"noMatches": {
+		"message": "0"
+	},
+	"copied": {
+		"message": "Copied to clipboard"
+	},
+	"recover": {
+		"message": "Recover"
+	},
+	"unpinNote": {
+		"message": "Unpin Note"
+	},
+	"pinNote": {
+		"message": "Pin Note"
+	},
+	"moveToFolder": {
+		"message": "Move to Folder…"
+	},
+	"duplicate": {
+		"message": "Duplicate"
+	},
+	"findInNote": {
+		"message": "Find in Note"
+	},
+	"insertDate": {
+		"message": "Insert Date & Time"
+	},
+	"copyNote": {
+		"message": "Copy Note"
+	},
+	"stopReading": {
+		"message": "Stop Reading"
+	},
+	"readAloud": {
+		"message": "Read Aloud"
+	},
+	"export": {
+		"message": "Export"
+	},
+	"exportTxt": {
+		"message": "Plain Text (.txt)"
+	},
+	"exportMd": {
+		"message": "Markdown (.md)"
+	},
+	"exportHtml": {
+		"message": "Web Page (.html)"
+	},
+	"print": {
+		"message": "Print"
+	},
+	"deleteNote": {
+		"message": "Delete Note"
+	},
+	"renameFolder": {
+		"message": "Rename Folder…"
+	},
+	"deleteFolder": {
+		"message": "Delete Folder"
+	},
+	"sortBy": {
+		"message": "Sort By"
+	},
+	"sortModified": {
+		"message": "Date Edited"
+	},
+	"sortCreated": {
+		"message": "Date Created"
+	},
+	"sortTitle": {
+		"message": "Title"
+	},
+	"groupByDate": {
+		"message": "Group by Date"
+	},
+	"emptyTrash": {
+		"message": "Delete All"
+	},
+	"settings": {
+		"message": "Settings"
+	},
+	"styleTitle": {
+		"message": "Title"
+	},
+	"styleHeading": {
+		"message": "Heading"
+	},
+	"styleSubheading": {
+		"message": "Subheading"
+	},
+	"styleBody": {
+		"message": "Body"
+	},
+	"styleMono": {
+		"message": "Monostyled"
+	},
+	"bold": {
+		"message": "Bold"
+	},
+	"italic": {
+		"message": "Italic"
+	},
+	"underline": {
+		"message": "Underline"
+	},
+	"strikethrough": {
+		"message": "Strikethrough"
+	},
+	"bulletedList": {
+		"message": "Bulleted List"
+	},
+	"dashedList": {
+		"message": "Dashed List"
+	},
+	"numberedList": {
+		"message": "Numbered List"
+	},
+	"blockQuote": {
+		"message": "Block Quote"
+	},
+	"cancel": {
+		"message": "Cancel"
+	},
+	"noFolder": {
+		"message": "No Folder (All Notes)"
+	},
+	"newFolder": {
+		"message": "New Folder"
+	},
+	"deleteForeverTitle": {
+		"message": "Delete this note permanently?"
+	},
+	"cannotUndo": {
+		"message": "You can't undo this action."
+	},
+	"delete": {
+		"message": "Delete"
+	},
+	"movedToTrash": {
+		"message": "Moved to Recently Deleted"
+	},
+	"recovered": {
+		"message": "Note recovered"
+	},
+	"movedTo": {
+		"message": "Moved to $1"
+	},
+	"emptyTrashTitle": {
+		"message": "Delete all notes in Recently Deleted?"
+	},
+	"deleteAll": {
+		"message": "Delete All"
+	},
+	"create": {
+		"message": "Create"
+	},
+	"rename": {
+		"message": "Rename"
+	},
+	"deleteFolderTitle": {
+		"message": "Delete “$1”?"
+	},
+	"deleteFolderText": {
+		"message": "The notes in this folder will be moved to Recently Deleted."
+	},
+	"clipped": {
+		"message": "Added to note"
+	},
+	"changePassword": {
+		"message": "Change Password"
+	},
+	"setPassword": {
+		"message": "Set Password"
+	},
+	"currentPassword": {
+		"message": "Enter your current password:"
+	},
+	"wrongPassword": {
+		"message": "Wrong password"
+	},
+	"syncTooLarge": {
+		"message": "Some notes are too large to sync. Shorten them or remove images first."
+	},
+	"nowSyncing": {
+		"message": "Notes now sync with your Chrome account"
+	},
+	"nowLocal": {
+		"message": "Notes are now kept on this computer"
+	},
+	"importPartial": {
+		"message": "Imported $1 notes, $2 could not be imported"
+	},
+	"importDone": {
+		"message": "Imported $1 notes"
+	},
+	"setPasswordFirst": {
+		"message": "Choose a password first"
+	},
+	"passwordShort": {
+		"message": "Use at least 4 characters"
+	},
+	"passwordMismatch": {
+		"message": "The passwords don't match"
+	},
+	"passwordSaved": {
+		"message": "Password saved. Notes are now locked."
+	},
+	"resetConfirm": {
+		"message": "Reset all settings to their defaults? Your notes are kept."
+	},
+	"resetDone": {
+		"message": "Settings reset"
+	},
+	"folders": {
+		"message": "Folders"
+	},
+	"done": {
+		"message": "Done"
+	},
+	"trashBanner": {
+		"message": "This note is in Recently Deleted."
+	},
+	"noTabs": {
+		"message": "No notes here yet."
+	},
+	"createNote": {
+		"message": "Create a Note"
+	},
+	"lockedTitle": {
+		"message": "Notes are locked"
+	},
+	"lockedText": {
+		"message": "Enter your password to view your notes."
+	},
+	"newNoteShortcut": {
+		"message": "New Note (Alt+N)"
+	},
+	"lockNotes": {
+		"message": "Lock Notes"
+	},
+	"more": {
+		"message": "More"
+	},
+	"search": {
+		"message": "Search"
+	},
+	"showAllNotes": {
+		"message": "Show All Notes"
+	},
+	"previous": {
+		"message": "Previous"
+	},
+	"next": {
+		"message": "Next"
+	},
+	"checklistShortcut": {
+		"message": "Checklist (Ctrl+Shift+L)"
+	},
+	"format": {
+		"message": "Format"
+	},
+	"password": {
+		"message": "Password"
+	},
+	"secGeneral": {
+		"message": "General"
+	},
+	"secAppearance": {
+		"message": "Appearance"
+	},
+	"secEditor": {
+		"message": "Editor"
+	},
+	"secClipper": {
+		"message": "Web Clipper"
+	},
+	"secPrivacy": {
+		"message": "Privacy & Lock"
+	},
+	"secData": {
+		"message": "Storage & Backup"
+	},
+	"secAbout": {
+		"message": "About"
+	},
+	"optSortBy": {
+		"message": "Sort notes by"
+	},
+	"optGroupHint": {
+		"message": "Today, Yesterday, Previous 7 Days…"
+	},
+	"optShortcuts": {
+		"message": "Keyboard shortcuts"
+	},
+	"optShortcutsHint": {
+		"message": "Open EasyNotes: Alt+Shift+N · Add selected text: Alt+Shift+A"
+	},
+	"change": {
+		"message": "Change…"
+	},
+	"optTheme": {
+		"message": "Theme"
+	},
+	"themeAuto": {
+		"message": "Auto"
+	},
+	"themeLight": {
+		"message": "Light"
+	},
+	"themeDark": {
+		"message": "Dark"
+	},
+	"optPaper": {
+		"message": "Paper style"
+	},
+	"paperNone": {
+		"message": "Plain"
+	},
+	"paperLines": {
+		"message": "Lines"
+	},
+	"paperGrid": {
+		"message": "Grid"
+	},
+	"optFont": {
+		"message": "Font"
+	},
+	"fontSystem": {
+		"message": "SF Pro (default)"
+	},
+	"fontSerif": {
+		"message": "Serif"
+	},
+	"fontRounded": {
+		"message": "Rounded"
+	},
+	"fontMono": {
+		"message": "Monospaced"
+	},
+	"optFontSize": {
+		"message": "Text size"
+	},
+	"previewTitle": {
+		"message": "Grocery list"
+	},
+	"previewText": {
+		"message": "The quick brown fox jumps over the lazy dog."
+	},
+	"optWordCount": {
+		"message": "Show word count"
+	},
+	"optSpellcheck": {
+		"message": "Check spelling while typing"
+	},
+	"optVoice": {
+		"message": "Read Aloud voice"
+	},
+	"voiceDefault": {
+		"message": "System default"
+	},
+	"optRate": {
+		"message": "Reading speed"
+	},
+	"optContextMenus": {
+		"message": "Show “Add to EasyNotes” in the right-click menu"
+	},
+	"optClipTarget": {
+		"message": "Add clips to"
+	},
+	"clipLast": {
+		"message": "Last edited note"
+	},
+	"clipNew": {
+		"message": "A new note"
+	},
+	"optClipSource": {
+		"message": "Include a link to the source page"
+	},
+	"optLock": {
+		"message": "Lock notes with a password"
+	},
+	"optLockHint": {
+		"message": "Asks for the password every time the sidebar opens."
+	},
+	"lockDisclaimer": {
+		"message": "The lock hides your notes from people using this browser. Notes are not encrypted on disk."
+	},
+	"optStorage": {
+		"message": "Where to keep notes"
+	},
+	"storageLocal": {
+		"message": "On this computer"
+	},
+	"storageLocalHint": {
+		"message": "No size limit. Images in notes are supported."
+	},
+	"storageSync": {
+		"message": "Sync with your Chrome account"
+	},
+	"storageSyncHint": {
+		"message": "Available on every computer you sign in to. About 8 KB per note, 100 KB in total, no images."
+	},
+	"optUsage": {
+		"message": "Space used"
+	},
+	"optExport": {
+		"message": "Back up all notes"
+	},
+	"optExportHint": {
+		"message": "Saves notes and folders to a .json file."
+	},
+	"exportBtn": {
+		"message": "Export…"
+	},
+	"optImport": {
+		"message": "Import notes"
+	},
+	"optImportHint": {
+		"message": "From an EasyNotes backup, a Note Sidebar export, or any .txt / .md file."
+	},
+	"importBtn": {
+		"message": "Import…"
+	},
+	"optReset": {
+		"message": "Reset settings"
+	},
+	"optResetHint": {
+		"message": "Your notes are kept."
+	},
+	"resetBtn": {
+		"message": "Reset…"
+	},
+	"aboutText": {
+		"message": "Simple notes in your browser sidebar: write, make checklists and save bits of the web."
+	},
+	"newPassword": {
+		"message": "New password"
+	},
+	"repeatPassword": {
+		"message": "Repeat password"
+	}
+}

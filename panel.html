@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<!--
+EasyNotes - based on Note Sidebar, Copyright (C) 2026 Stefan vd (www.stefanvd.net)
+Modifications Copyright (C) 2026 EasyNotes contributors
+Licensed under the GNU General Public License v2 or later. See LICENSE.
+-->
+<title>EasyNotes</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="color-scheme" content="light dark">
+<link rel="stylesheet" href="styles/fonts.css">
+<link rel="stylesheet" href="styles/panel.css">
+<script src="scripts/store.js"></script>
+<script src="scripts/panel.js" defer></script>
+</head>
+<body>
+<div id="app" class="app" data-level="1">
+
+	<!-- Folders -->
+	<section id="view-folders" class="view" data-level="0" aria-label="Folders">
+		<header class="bar">
+			<div class="bar-left"></div>
+			<div class="bar-right">
+				<button id="btn-settings" class="icon-btn" data-icon="gear" title="Settings" data-i18n-title="settings"></button>
+			</div>
+		</header>
+		<div class="scroll">
+			<h1 class="large-title" data-i18n="folders">Folders</h1>
+			<div id="folder-list" class="group"></div>
+		</div>
+		<footer class="bar bottom">
+			<button id="btn-new-folder" class="icon-btn" data-icon="folderPlus" title="New Folder" data-i18n-title="newFolder"></button>
+			<span class="spacer"></span>
+			<button id="btn-new-note-folders" class="icon-btn accent" data-icon="compose" title="New Note (Alt+N)" data-i18n-title="newNoteShortcut"></button>
+		</footer>
+	</section>
+
+	<!-- Note list -->
+	<section id="view-list" class="view" data-level="1" aria-label="Notes">
+		<header class="bar">
+			<button id="btn-to-folders" class="back-btn"><span data-icon="chevronLeft"></span><span data-i18n="folders">Folders</span></button>
+			<div class="bar-right">
+				<button id="btn-lock" class="icon-btn hidden" data-icon="lock" title="Lock Notes" data-i18n-title="lockNotes"></button>
+				<button id="btn-list-more" class="icon-btn" data-icon="ellipsis" title="More" data-i18n-title="more"></button>
+			</div>
+		</header>
+		<div class="scroll" id="list-scroll">
+			<h1 class="large-title" id="list-title">Notes</h1>
+			<label class="search">
+				<span data-icon="search"></span>
+				<input id="search" type="search" autocomplete="off" placeholder="Search" data-i18n-placeholder="search">
+			</label>
+			<div id="note-list" class="note-list"></div>
+			<div id="list-empty" class="empty hidden"></div>
+		</div>
+		<footer class="bar bottom">
+			<span class="spacer"></span>
+			<span id="note-count" class="bar-caption"></span>
+			<button id="btn-new-note" class="icon-btn accent" data-icon="compose" title="New Note (Alt+N)" data-i18n-title="newNoteShortcut"></button>
+		</footer>
+	</section>
+
+	<!-- Editor -->
+	<section id="view-editor" class="view" data-level="2" aria-label="Note">
+		<header class="bar tabbar">
+			<button id="btn-back" class="icon-btn" data-icon="list" title="Show All Notes" data-i18n-title="showAllNotes"></button>
+			<div id="tabstrip" class="tabstrip" role="tablist"></div>
+			<button id="btn-add-tab" class="icon-btn accent" data-icon="plus" title="New Note (Alt+N)" data-i18n-title="newNoteShortcut"></button>
+		</header>
+		<div id="findbar" class="findbar hidden">
+			<label class="search">
+				<span data-icon="search"></span>
+				<input id="find-input" type="text" autocomplete="off" placeholder="Find in Note" data-i18n-placeholder="findInNote">
+			</label>
+			<span id="find-count" class="find-count"></span>
+			<button id="find-prev" class="icon-btn small" data-icon="chevronUp" title="Previous" data-i18n-title="previous"></button>
+			<button id="find-next" class="icon-btn small" data-icon="chevronDown" title="Next" data-i18n-title="next"></button>
+			<button id="find-done" class="text-btn" data-i18n="done">Done</button>
+		</div>
+		<div id="trash-banner" class="banner hidden">
+			<span data-i18n="trashBanner">This note is in Recently Deleted.</span>
+			<button id="btn-recover" class="text-btn" data-i18n="recover">Recover</button>
+		</div>
+		<div id="quota-banner" class="banner warn hidden"></div>
+		<div class="scroll editor-scroll" id="editor-scroll">
+			<div id="note-date" class="note-date"></div>
+			<div id="editor" class="editor" contenteditable="true" spellcheck="true" aria-label="Note text"></div>
+			<div id="editor-empty" class="empty hidden">
+				<p data-i18n="noTabs">No notes here yet.</p>
+				<button id="btn-empty-new" class="text-btn" data-i18n="createNote">Create a Note</button>
+			</div>
+		</div>
+		<footer class="bar bottom editor-foot">
+			<button id="btn-checklist" class="icon-btn" data-icon="checklist" title="Checklist (Ctrl+Shift+L)" data-i18n-title="checklistShortcut"></button>
+			<button id="btn-format" class="icon-btn" data-icon="format" title="Format" data-i18n-title="format"></button>
+			<button id="btn-note-more" class="icon-btn" data-icon="ellipsis" title="More" data-i18n-title="more"></button>
+			<span class="spacer"></span>
+			<button id="btn-speak-stop" class="text-btn hidden" data-i18n="stopReading">Stop Reading</button>
+			<span id="word-count" class="bar-caption"></span>
+		</footer>
+	</section>
+</div>
+
+<div id="popover-layer" class="popover-layer hidden"></div>
+<div id="sheet-layer" class="sheet-layer hidden"></div>
+
+<div id="lockscreen" class="lockscreen hidden">
+	<div class="lock-card">
+		<div class="lock-icon" data-icon="lockLarge"></div>
+		<h2 data-i18n="lockedTitle">Notes are locked</h2>
+		<p data-i18n="lockedText">Enter your password to view your notes.</p>
+		<form id="lock-form" autocomplete="off">
+			<input id="lock-input" type="password" placeholder="Password" data-i18n-placeholder="password">
+		</form>
+	</div>
+</div>
+
+<div id="toast" class="toast" role="status" aria-live="polite"></div>
+</body>
+</html>

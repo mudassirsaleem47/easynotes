@@ -56,7 +56,7 @@
 ### From source (developer mode)
 1. Download this repository (**Code → Download ZIP**) and unzip it, or clone it:
    ```bash
-   git clone https://github.com/<your-username>/easynotes.git
+   git clone https://github.com/mudassirsaleem47/easynotes.git
    ```
 2. Open `chrome://extensions` in Chrome.
 3. Turn on **Developer mode** (top right).
